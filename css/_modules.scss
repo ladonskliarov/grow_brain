@@ -55,3 +55,9 @@
         display: none;
     }
 }
+
+.tilted-icon {
+    display: inline-block;
+    transform: rotate(18deg);
+    transform-origin: bottom left;
+}

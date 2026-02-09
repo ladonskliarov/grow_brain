@@ -62,10 +62,10 @@ header {
     height: 100px;
     gap: 120px;
 
-    .content {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+    @include responsive('desktop') {
+        margin-left: -40px;
+        align-self: center;
+        max-width: 1120px;
     }
 
     @include responsive('tablet-portrait') {
@@ -184,38 +184,6 @@ header {
     }
 
     .content {
-        .hero__app-icon {
-            width: 55px;
-            height: auto;
-            margin-right: 200px;
-            margin-bottom: 20px;
-
-            @include responsive('tablet-portrait') {
-                display: none;
-            }
-        }
-        .hero__img {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            height: 200px;
-            width: 100%;
-            background: url('../images/hero_cat.svg') center / contain no-repeat;
-
-            @include responsive('tablet-portrait') {
-                height: 380px;
-            }
-
-            @include responsive('tablet-landscape') {
-                height: 420px;
-            }
-
-            @include responsive('desktop') {
-                height: 487px;
-            }
-        }
-
         .hero__title {
             line-height: 1.2;
             font-size: max(18px);
@@ -249,6 +217,63 @@ header {
             }
         }
 
+        .hero__video-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 200px;
+            width: 100%;
+
+            @include responsive('tablet-portrait') {
+                height: 380px;
+            }
+
+            @include responsive('tablet-landscape') {
+                height: 420px;
+            }
+
+            @include responsive('desktop') {
+                height: 487px;
+            }
+        }
+
+        .hero__app-icon {
+            z-index: 3;
+            position: absolute;
+            width: 55px;
+            height: auto;
+            margin-right: 230px;
+            margin-bottom: 10px;
+
+            @include responsive('tablet-portrait') {
+                display: none;
+            }
+        }
+
+        .hero__video {
+            z-index: 1;
+            height: 200px;
+            mask-image: radial-gradient(ellipse, black 30%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse, black 30%, transparent 70%);
+            mask-size: cover;
+            -webkit-mask-size: cover;
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            
+            @include responsive('tablet-portrait') {
+                height: 380px;
+            }
+
+            @include responsive('tablet-landscape') {
+                height: 420px;
+            }
+
+            @include responsive('desktop') {
+                height: 487px;
+            }
+        }
+
         .hero__cta-text {
             display: flex;
             align-self: flex-end;
@@ -270,7 +295,34 @@ header {
             }
         }
 
+        .hero__cta-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            width: fit-content;
+            align-self: flex-end;
+            
+            @include responsive('tablet-landscape') {
+                align-self: flex-start;
+            }
+            
+            .star-icon {
+                height: 26px;
+                width: 26px;
+                position: absolute;
+                z-index: 1;
+                margin-top: -30px;
+                margin-left: -30px;
+
+                @include responsive('tablet-portrait') {
+                    display: none;
+                }
+            }
+        }
+
         .btn {
+            z-index: 0;
             display: flex;
             justify-self: flex-end;
             align-self: flex-end;
@@ -438,12 +490,14 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: start;
+        max-width: 320px;
         line-height: 1.3;
         font-size: 14px;
 
         @include responsive('tablet-portrait') {
             display: block;
             font-size: max(100%, 22px);
+            max-width: 420px;
         }
 
         @include responsive('tablet-landscape') {
@@ -452,13 +506,16 @@ header {
 
         @include responsive('desktop') {
             font-size: max(100%, 36px);
+            max-width: 720px;
         }
 
         .build-trust__column-text-1 {
             line-height: 1.3;
+            width: 100%;
         }
 
         .description-box {
+            z-index: 1;
             background-color: $text-color;
             direction: column;
             width: fit-content;
@@ -516,9 +573,37 @@ header {
         .build-trust__column-text-2 {
             display: none;
             line-height: 1.3;
+            width: 100%;
 
             @include responsive('tablet-portrait') {
                 display: block;
+            }
+        }
+
+        .build-trust__background-img {
+            position: absolute;
+            z-index: 0;
+            max-width: 100px;
+            opacity: 0.5;
+            margin-top: -40px;
+            margin-right: -80px;
+            transform: rotate(10deg);
+            align-self: center;
+
+            @include responsive('tablet-portrait') {
+                max-width: 150px;
+                margin-top: -60px;
+                margin-right: -100px;
+            }
+            @include responsive('tablet-landscape') {
+                max-width: 200px;
+                margin-top: -60px;
+                margin-right: -120px;
+            }
+            @include responsive('desktop') {
+                max-width: 200px;
+                margin-top: -60px;
+                margin-right: -160px;
             }
         }
     }

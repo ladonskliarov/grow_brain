@@ -22,27 +22,29 @@
 
 <body>
     <header>
-        <div class="header__logo-container">
-            <img src="images/logo_part_1.svg" class="header__logo" alt="GROW"></img>
-            <img src="images/logo_part_2.svg" class="header__logo" alt="BRAIN"></img>
-            <img src="images/app_icon.svg" class="header__icon" alt="App icon"></img>
-        </div>
-        <nav class="nav-links" id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="games.html">Games</a>
-            <a href="about.html">About us</a>
-            <a href="https://www.instagram.com/growbrain.app/">
-                <img src="images/instagram.svg" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/108884815065816?ref=PROFILE_EDIT_xav_ig_profile_page_web">
-                <img src="images/facebook.svg" alt="Facebook">
-            </a>
-        </nav>
-        <div class="burger-menu" id="burger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <!-- <div class="header-content"> -->
+            <div class="header__logo-container">
+                <img src="images/logo_part_1.svg" class="header__logo" alt="GROW"></img>
+                <img src="images/logo_part_2.svg" class="header__logo" alt="BRAIN"></img>
+                <img src="images/app_icon.svg" class="header__icon" alt="App icon"></img>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="about.html">About us</a>
+                <a href="https://www.instagram.com/growbrain.app/">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/108884815065816?ref=PROFILE_EDIT_xav_ig_profile_page_web">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+            </nav>
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        <!-- </div> -->
     </header>
     <main>
         <section class="hero">
@@ -54,19 +56,27 @@
                 <h1 class="hero__title">Stop the app distractions<br>for your child</h1>
                 <p class="hero__description">The smart mobile app locker that requires 5 minutes of scientifically
                     proven brain games to unlock app you specify</p>
-                <div class="hero__img">
+                <div class="hero__video-container">
+                    <video autoplay muted loop class="hero__video">
+                        <source src="images/hero_video.mp4" type="video/mp4">
+                    </video>
+                    </video>
                     <img src="images/app_icon.svg" class="hero__app-icon" alt="App icon"></img>
                 </div>
                 <p class="hero__cta-text">Make your child's screen<br>time smarter today</p>
-                <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apps.apple.com/ua/app/growbrain/id6742379010&ved=2ahUKEwiGjv2p9MySAxUIIRAIHbOaNGkQFnoECBYQAQ&usg=AOvVaw1_oj4J7WcVZlyWlB4S8Me7"
-                    class="btn">
-                    <img src="images/app_store.svg" alt="App Store">
-                </a>
+                <div class="hero__cta-container">
+                    <img src="images/star.svg" class="star-icon"></img>
+                    <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apps.apple.com/ua/app/growbrain/id6742379010&ved=2ahUKEwiGjv2p9MySAxUIIRAIHbOaNGkQFnoECBYQAQ&usg=AOvVaw1_oj4J7WcVZlyWlB4S8Me7"
+                        class="btn">
+                        <img src="images/app_store.svg" alt="App Store">
+                    </a>
+                </div>
             </div>
         </section>
         <section class="hold-interest-section">
             <div class="content">
-                <h2 class="hold-interest-section__title">Select apps you want to<br>temporary lock 🔒</h2>
+                <h2 class="hold-interest-section__title">Select apps you want to<br>temporary lock <span
+                        class="tilted-icon">🔒</span></h2>
                 <div class="hold-interest-section__row_1">
                     <div class="hold-interest-section__column_1">
                         <img src="images/apps_group.svg" class="img_apps" alt="Distracting apps"></img>
@@ -87,25 +97,29 @@
                         Your child plays 5 quick brain-training games in GrowBrain — just 1 minute each to boost their
                         cognitive skills
                     </p>
-                    <div class="description-box">
-                        <ol class="description-box__list">
-                            <li class="list__text">Sequential thinking</li>
-                            <li class="list__text">Visual memory</li>
-                            <li class="list__text">Peripheral attention</li>
-                            <li class="list__text">Memory capacity increase</li>
-                            <li class="list__text">Spacial memory</li>
-                        </ol>
+                    <div
+                        style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: start; width: fit-content;">
+                        <img src="images/memory_capacity_game.svg" class="build-trust__background-img"></img>
+                        <div class="description-box">
+                            <ol class="description-box__list">
+                                <li class="list__text">Sequential thinking</li>
+                                <li class="list__text">Visual memory</li>
+                                <li class="list__text">Peripheral attention</li>
+                                <li class="list__text">Memory capacity increase</li>
+                                <li class="list__text">Spacial memory</li>
+                            </ol>
+                        </div>
                     </div>
                     <p class="build-trust__column-text-2">
                         Once finished, they’ve earned their screen time! Apps get automatically unlocked! <span
-                            display="inline-block" style="transform-origin: 0 0; transform: rotate(45deg);">✅</span>
+                            class="tilted-icon">✅</span>
                     </p>
                 </div>
             </div>
             <div class="content">
                 <p class="build-trust__bottom-text">
                     Once finished, they’ve earned their screen time! Apps get automatically unlocked! <span
-                        display="inline-block" style="transform-origin: 0 0; transform: rotate(45deg);">✅</span>
+                        class="tilted-icon">✅</span>
                 </p>
             </div>
         </section>
@@ -126,7 +140,8 @@
     </main>
     <footer class="footer">
         <p class="footer__text">Get started!</p>
-        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apps.apple.com/ua/app/growbrain/id6742379010&ved=2ahUKEwiGjv2p9MySAxUIIRAIHbOaNGkQFnoECBYQAQ&usg=AOvVaw1_oj4J7WcVZlyWlB4S8Me7" class="btn">
+        <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://apps.apple.com/ua/app/growbrain/id6742379010&ved=2ahUKEwiGjv2p9MySAxUIIRAIHbOaNGkQFnoECBYQAQ&usg=AOvVaw1_oj4J7WcVZlyWlB4S8Me7"
+            class="btn">
             <img src="images/app_store.svg" alt="App Store">
         </a>
         <img src="images/balloons_game.svg" class="balloons-img" alt="Ballons" loading="lazy">
